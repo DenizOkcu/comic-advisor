@@ -1,0 +1,173 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2019 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2019 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2019 MARVEL</a>",
+  "etag": "a82f0c3b9ece5f1f59023c8cf60190e93f2e29a6",
+  "data": {
+    "offset": 3454,
+    "limit": 1,
+    "total": 44754,
+    "count": 1,
+    "results": [
+      {
+        "id": 60721,
+        "digitalId": 45760,
+        "title": "Moon Girl and Devil Dinosaur (2015) #23",
+        "issueNumber": 23,
+        "variantDescription": "",
+        "description": "IT'S THE END OF AN ERA AS “GIRL-MOON” REACHES ITS STUNNING CONCLUSION! Lunella and Devil's adventure took them across space - now they're going through time! Hey, didn't Devil used to have a different partner? Devil makes the hardest choice of all...",
+        "modified": "2017-09-20T12:21:32-0400",
+        "isbn": "",
+        "upc": "759606084051002311",
+        "diamondCode": "JUL171093",
+        "ean": "",
+        "issn": "",
+        "format": "Comic",
+        "pageCount": 32,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "IT'S THE END OF AN ERA AS “GIRL-MOON” REACHES ITS STUNNING CONCLUSION! Lunella and Devil's adventure took them across space - now they're going through time! Hey, didn't Devil used to have a different partner? Devil makes the hardest choice of all..."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/60721",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/issue/60721/moon_girl_and_devil_dinosaur_2015_23?utm_campaign=apiRef&utm_source=e4d9813c604e68af2b80750496961901"
+          },
+          {
+            "type": "purchase",
+            "url": "http://comicstore.marvel.com/Moon-Girl-and-Devil-Dinosaur-23/digital-comic/45760?utm_campaign=apiRef&utm_source=e4d9813c604e68af2b80750496961901"
+          },
+          {
+            "type": "reader",
+            "url": "http://marvel.com/digitalcomics/view.htm?iid=45760&utm_campaign=apiRef&utm_source=e4d9813c604e68af2b80750496961901"
+          },
+          {
+            "type": "inAppLink",
+            "url": "https://applink.marvel.com/issue/45760?utm_campaign=apiRef&utm_source=e4d9813c604e68af2b80750496961901"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/20839",
+          "name": "Moon Girl and Devil Dinosaur (2015 - Present)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2017-09-27T00:00:00-0400"
+          },
+          {
+            "type": "focDate",
+            "date": "2017-09-04T00:00:00-0400"
+          },
+          {
+            "type": "unlimitedDate",
+            "date": "2018-04-02T00:00:00-0400"
+          },
+          {
+            "type": "digitalPurchaseDate",
+            "date": "2017-09-27T00:00:00-0400"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 3.99
+          },
+          {
+            "type": "digitalPurchasePrice",
+            "price": 3.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/c0/59c2888aa0554",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/c0/59c2888aa0554",
+            "extension": "jpg"
+          },
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/1/40/597f96162c166",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 5,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60721/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12744",
+              "name": "Tamra Bonvillain",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12765",
+              "name": "Natacha Bustos",
+              "role": "penciler (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12993",
+              "name": "Vc Travis Lanham",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11347",
+              "name": "Brandon Montclare",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/13167",
+              "name": "Christopher Robinson",
+              "role": "editor"
+            }
+          ],
+          "returned": 5
+        },
+        "characters": {
+          "available": 1,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60721/characters",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017583",
+              "name": "Devil Dinosaur (Devil Dinosaur)"
+            }
+          ],
+          "returned": 1
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60721/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/131911",
+              "name": "cover from Moon Girl and Devil Dinosaur (2015) #23",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/131912",
+              "name": "story from Moon Girl and Devil Dinosaur (2015) #23",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60721/events",
+          "items": [],
+          "returned": 0
+        }
+      }
+    ]
+  }
+}
