@@ -1,43 +1,37 @@
 import React from "react";
+import { Row } from "./grid";
 
-const ComicsListItem = props => {
-  const writer = props.comic.creators.items.find(
+const ComicsListItem = ({ comic, selectComic }) => {
+  const writer = comic.creators.find(
     creator =>
       creator.role === "writer" ||
       creator.role === "inker" ||
       creator.role === "editor"
   );
+  // better function name
+  const onclick = () => {
+    selectComic(comic.id);
+  };
 
   return (
-    <div
-      className="row"
-      onClick={() => {
-        props.selectComic(props.comic);
-      }}
-    >
+    <Row onClick={onclick}>
       <div className="fixed four columns ">
-        <img
-          src={`${props.comic.thumbnail.path}.${props.comic.thumbnail.extension}`}
-          className="thumb"
-          alt={props.comic.title}
-        />
+        <img src={comic.coverPath} className="thumb" alt={comic.title} />
       </div>
       <div className="fixed eight columns ">
-        <div className="row">
-          <div className="twelve columns list-item-title">
-            {props.comic.title}
-          </div>
-        </div>
-        <div className="row">
+        <Row>
+          <div className="twelve columns list-item-title">{comic.title}</div>
+        </Row>
+        <Row>
           <div className="twelve columns">{writer && writer.name}</div>
-        </div>
-        <div className="row">
+        </Row>
+        <Row>
           <div className="twelve columns">
-            {props.comic.pageCount} Pages - ${props.comic.prices[0].price}
+            {comic.pageCount} Pages - ${comic.price}
           </div>
-        </div>
+        </Row>
       </div>
-    </div>
+    </Row>
   );
 };
 

@@ -9,9 +9,7 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
       Comics Details
     </h4>
     <hr />
-    <div
-      className="row"
-    >
+    <Row>
       <div
         className="twelve columns"
       >
@@ -21,17 +19,14 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
           title
         </h5>
       </div>
-    </div>
-    <div
-      className="row"
-    >
+    </Row>
+    <Row>
       <div
         className="five columns"
       >
         <img
           alt="title"
           className="detail-img"
-          src="test.jpg"
         />
       </div>
       <div
@@ -47,7 +42,7 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
           }
         />
       </div>
-    </div>
+    </Row>
   </article>
 </main>
 `;

@@ -6,7 +6,7 @@ describe("ComicsListItem", () => {
   it('should render correctly in "debug" mode', () => {
     const comic = {
       id: 1,
-      creators: { items: [{ name: "writer name" }] },
+      creators: [{ name: "writer name" }],
       thumbnail: { path: "test", extension: "jpg" },
       prices: [{ price: 3.99 }],
       title: "title",

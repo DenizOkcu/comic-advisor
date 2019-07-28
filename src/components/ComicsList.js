@@ -1,21 +1,23 @@
 import React from "react";
 import ComicsListItem from "./ComicsListItem";
 
-const ComicsList = props => {
-  const listItems = props.comics.map(comic => (
-    <ComicsListItem
-      key={comic.id}
-      comic={comic}
-      selectComic={props.selectComic}
-    />
-  ));
+// im rest destrukturieren (kann auf default) { comics, selectComic = {} }
+const ComicsList = ({ comics, selectComic }) => {
+  // kann auch in zeile 18 passieren
+  const listItems =
+    comics &&
+    comics.map(comic => (
+      <ComicsListItem key={comic.id} comic={comic} selectComic={selectComic} />
+    ));
 
-  return (
+  return listItems ? (
     <aside className="four columns">
       <h4>Comics List</h4>
       <hr />
       {listItems}
     </aside>
+  ) : (
+    ""
   );
 };
 

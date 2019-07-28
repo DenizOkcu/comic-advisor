@@ -1,32 +1,42 @@
 import React from "react";
+import { Row } from "./grid";
 import ComicDetailsCreators from "./ComicDetailsCreators";
 
-const ComicsDetails = props => {
+const ComicsDetails = ({ comic }) => {
+  // zeile 18+19 hier bearbeiten
+  // oder sogar thumbnail komponente anlegen
+
+  // comic image komponente bauen
+  // platzhalter rndern fürs laden
+  // size übergeben
+
   return (
     <main>
-      <article className="eight columns hide-on-small">
-        <h4>Comics Details</h4>
-        <hr />
-        <div className="row">
-          <div className="twelve columns">
-            <h5 className="detail-title">{props.comic.title}</h5>
-          </div>
-        </div>
-        <div className="row">
-          <div className="five columns">
-            <img
-              src={`${props.comic.thumbnail &&
-                props.comic.thumbnail.path}.${props.comic.thumbnail &&
-                props.comic.thumbnail.extension}`}
-              className="detail-img"
-              alt={props.comic.title}
-            />
-          </div>
-          <div className="seven columns">
-            <ComicDetailsCreators creators={props.comic.creators.items} />
-          </div>
-        </div>
-      </article>
+      {comic ? (
+        <article className="eight columns hide-on-small">
+          <h4>Comics Details</h4>
+          <hr />
+          <Row>
+            <div className="twelve columns">
+              <h5 className="detail-title">{comic.title}</h5>
+            </div>
+          </Row>
+          <Row>
+            <div className="five columns">
+              <img
+                src={comic.coverPath}
+                className="detail-img"
+                alt={comic.title}
+              />
+            </div>
+            <div className="seven columns">
+              <ComicDetailsCreators creators={comic.creators} />
+            </div>
+          </Row>
+        </article>
+      ) : (
+        ""
+      )}
     </main>
   );
 };

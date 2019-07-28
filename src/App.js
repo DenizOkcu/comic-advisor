@@ -1,34 +1,54 @@
-import React from "react";
+import React, { Component } from "react";
+
+import { Container, Row } from "./components/grid";
 import Header from "./components/Header";
-import ComicsList from "./components/ComicsList";
 import ComicsDetails from "./components/ComicsDetails";
-import comics from "./data/comics";
+import ComicsList from "./components/ComicsList";
+import ComicsSerializer from "./utils/ComicsSerializer";
+
+// import mock data
+import comicsData from "./data/comics";
+
 import "./App.css";
 
-class App extends React.Component {
+class App extends Component {
+  // TODO: get selectedComicId from route || default
   state = {
-    comics: comics.data.results,
-    selectedComic: comics.data.results[0]
+    comics: null,
+    selectedComicId: null
   };
 
-  selectComic = comic => {
-    this.setState({ selectedComic: comic });
+  componentDidMount() {
+    // use mock data: comicsData
+    const comicsSerializer = new ComicsSerializer();
+    const comics = comicsSerializer.serialize(comicsData);
+
+    this.setState({ comics: comics });
+    this.setState({ selectedComicId: comics[0] && comics[0].id });
+  }
+
+  // TODO: build two components for loading and displaying
+
+  selectComic = id => {
+    // TODO: update url after implementing routes
+    this.setState({ selectedComicId: id });
   };
 
   render() {
+    let comics = this.state.comics;
+    let selectedComic =
+      comics && comics.find(comic => comic.id === this.state.selectedComicId);
+
     return (
-      <div className="container">
-        <div className="row">
+      <Container>
+        <Row>
           <Header />
-        </div>
-        <div className="row">
-          <ComicsList
-            comics={this.state.comics}
-            selectComic={this.selectComic}
-          />
-          <ComicsDetails comic={this.state.selectedComic} />
-        </div>
-      </div>
+        </Row>
+        <Row>
+          <ComicsList comics={comics} selectComic={this.selectComic} />
+          <ComicsDetails comic={selectedComic} />
+        </Row>
+      </Container>
     );
   }
 }

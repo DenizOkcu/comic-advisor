@@ -11,13 +11,11 @@ exports[`ComicsList should render correctly in "debug" mode 1`] = `
   <ComicsListItem
     comic={
       Object {
-        "creators": Object {
-          "items": Array [
-            Object {
-              "name": "writer name",
-            },
-          ],
-        },
+        "creators": Array [
+          Object {
+            "name": "writer name",
+          },
+        ],
         "id": 1,
         "pageCount": 32,
         "prices": Array [

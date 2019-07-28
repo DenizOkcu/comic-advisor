@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
-<div
-  className="row"
+<Row
   onClick={[Function]}
 >
   <div
@@ -11,39 +10,31 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
     <img
       alt="title"
       className="thumb"
-      src="test.jpg"
     />
   </div>
   <div
     className="fixed eight columns "
   >
-    <div
-      className="row"
-    >
+    <Row>
       <div
         className="twelve columns list-item-title"
       >
         title
       </div>
-    </div>
-    <div
-      className="row"
-    >
+    </Row>
+    <Row>
       <div
         className="twelve columns"
       />
-    </div>
-    <div
-      className="row"
-    >
+    </Row>
+    <Row>
       <div
         className="twelve columns"
       >
         32
          Pages - $
-        3.99
       </div>
-    </div>
+    </Row>
   </div>
-</div>
+</Row>
 `;

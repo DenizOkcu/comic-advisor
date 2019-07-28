@@ -1,14 +1,15 @@
 import React from "react";
 
-const ComicDetailsCreators = props => {
-  const creators = props.creators.map(creator => (
+const ComicDetailsCreators = ({ creators }) => {
+  // ids für den key im serializer vergeben
+  const creatorItems = creators.map(creator => (
     <li key={creator.name}>{`${creator.name}(${creator.role})`}</li>
   ));
 
   return (
     <section>
       Created by:
-      <ul>{creators}</ul>
+      <ul>{creatorItems}</ul>
     </section>
   );
 };
