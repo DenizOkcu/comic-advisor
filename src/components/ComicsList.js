@@ -11,11 +11,11 @@ const ComicsList = props => {
   ));
 
   return (
-    <div className="four columns header ">
+    <aside className="four columns">
       <h4>Comics List</h4>
       <hr />
       {listItems}
-    </div>
+    </aside>
   );
 };
 

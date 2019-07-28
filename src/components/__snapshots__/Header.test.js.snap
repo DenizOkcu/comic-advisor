@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly in "debug" mode 1`] = `
-<div
+<header
   className="twelve columns header"
 >
   <h1
@@ -12,5 +12,5 @@ exports[`Header should render correctly in "debug" mode 1`] = `
   <h5>
     What should i read today?
   </h5>
-</div>
+</header>
 `;

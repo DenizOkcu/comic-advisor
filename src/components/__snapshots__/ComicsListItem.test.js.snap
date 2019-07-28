@@ -9,6 +9,7 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
     className="fixed four columns "
   >
     <img
+      alt="title"
       className="thumb"
       src="test.jpg"
     />

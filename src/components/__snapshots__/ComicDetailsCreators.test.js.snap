@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComicDetailsCreators should render correctly in "debug" mode 1`] = `
+<section>
+  Created by:
+  <ul>
+    <li
+      key="writer name"
+    >
+      writer name(writer)
+    </li>
+  </ul>
+</section>
+`;

@@ -19,6 +19,7 @@ const ComicsListItem = props => {
         <img
           src={`${props.comic.thumbnail.path}.${props.comic.thumbnail.extension}`}
           className="thumb"
+          alt={props.comic.title}
         />
       </div>
       <div className="fixed eight columns ">

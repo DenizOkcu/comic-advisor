@@ -1,44 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
-<div
-  className="eight columns header  hide-on-small"
->
-  <h4>
-    Comics Details
-  </h4>
-  <hr />
-  <div
-    className="row"
+<main>
+  <article
+    className="eight columns hide-on-small"
   >
+    <h4>
+      Comics Details
+    </h4>
+    <hr />
     <div
-      className="twelve columns"
+      className="row"
     >
-      <h5
-        className="detail-title"
+      <div
+        className="twelve columns"
       >
-        title
-      </h5>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="five columns"
-    >
-      <img
-        className="detail-img"
-        src="test.jpg"
-      />
+        <h5
+          className="detail-title"
+        >
+          title
+        </h5>
+      </div>
     </div>
     <div
-      className="seven columns"
+      className="row"
     >
-      <p
-        className="detail-description"
-      />
+      <div
+        className="five columns"
+      >
+        <img
+          alt="title"
+          className="detail-img"
+          src="test.jpg"
+        />
+      </div>
+      <div
+        className="seven columns"
+      >
+        <ComicDetailsCreators
+          creators={
+            Array [
+              Object {
+                "name": "writer name",
+              },
+            ]
+          }
+        />
+      </div>
     </div>
-  </div>
-</div>
+  </article>
+</main>
 `;
