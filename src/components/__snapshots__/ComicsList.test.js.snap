@@ -2,13 +2,37 @@
 
 exports[`ComicsList should render correctly in "debug" mode 1`] = `
 <div
-  className="four columns header bordered-box"
+  className="four columns header "
 >
   <h4>
     Comics List
   </h4>
   <hr />
-  <ComicsListItem />
-  <ComicsListItem />
+  <ComicsListItem
+    comic={
+      Object {
+        "creators": Object {
+          "items": Array [
+            Object {
+              "name": "writer name",
+            },
+          ],
+        },
+        "id": 1,
+        "pageCount": 32,
+        "prices": Array [
+          Object {
+            "price": 3.99,
+          },
+        ],
+        "thumbnail": Object {
+          "extension": "jpg",
+          "path": "test",
+        },
+        "title": "title",
+      }
+    }
+    key="1"
+  />
 </div>
 `;

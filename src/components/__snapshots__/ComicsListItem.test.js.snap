@@ -3,17 +3,18 @@
 exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
 <div
   className="row"
+  onClick={[Function]}
 >
   <div
-    className="fixed four columns bordered-box"
+    className="fixed four columns "
   >
     <img
       className="thumb"
-      src="./assets/59c2888aa0554.jpg"
+      src="test.jpg"
     />
   </div>
   <div
-    className="fixed eight columns bordered-box"
+    className="fixed eight columns "
   >
     <div
       className="row"
@@ -21,7 +22,7 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
       <div
         className="twelve columns list-item-title"
       >
-        Moon Girl and Devil Dinosaur (2015) #23
+        title
       </div>
     </div>
     <div
@@ -29,9 +30,7 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
     >
       <div
         className="twelve columns"
-      >
-        by Brandon Montclare
-      </div>
+      />
     </div>
     <div
       className="row"
@@ -39,7 +38,9 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
       <div
         className="twelve columns"
       >
-        09.12.2017 - 32 Pages
+        32
+         Pages - $
+        3.99
       </div>
     </div>
   </div>

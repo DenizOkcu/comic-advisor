@@ -1,22 +1,39 @@
 import React from "react";
 
-const ComicsListItem = () => {
+const ComicsListItem = props => {
+  const writer = props.comic.creators.items.find(
+    creator =>
+      creator.role === "writer" ||
+      creator.role === "inker" ||
+      creator.role === "editor"
+  );
+
   return (
-    <div className="row">
-      <div className="fixed four columns bordered-box">
-        <img src="./assets/59c2888aa0554.jpg" className="thumb" />
+    <div
+      className="row"
+      onClick={() => {
+        props.selectComic(props.comic);
+      }}
+    >
+      <div className="fixed four columns ">
+        <img
+          src={`${props.comic.thumbnail.path}.${props.comic.thumbnail.extension}`}
+          className="thumb"
+        />
       </div>
-      <div className="fixed eight columns bordered-box">
+      <div className="fixed eight columns ">
         <div className="row">
           <div className="twelve columns list-item-title">
-            Moon Girl and Devil Dinosaur (2015) #23
+            {props.comic.title}
           </div>
         </div>
         <div className="row">
-          <div className="twelve columns">by Brandon Montclare</div>
+          <div className="twelve columns">{writer && writer.name}</div>
         </div>
         <div className="row">
-          <div className="twelve columns">09.12.2017 - 32 Pages</div>
+          <div className="twelve columns">
+            {props.comic.pageCount} Pages - ${props.comic.prices[0].price}
+          </div>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
 <div
-  className="eight columns header bordered-box hide-on-small"
+  className="eight columns header  hide-on-small"
 >
   <h4>
     Comics Details
@@ -17,7 +17,7 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
       <h5
         className="detail-title"
       >
-        Moon Girl and Devil Dinosaur (2015) #23
+        title
       </h5>
     </div>
   </div>
@@ -29,7 +29,7 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
     >
       <img
         className="detail-img"
-        src="./assets/59c2888aa0554.jpg"
+        src="test.jpg"
       />
     </div>
     <div
@@ -37,9 +37,7 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
     >
       <p
         className="detail-description"
-      >
-        IT'S THE END OF AN ERA AS “GIRL-MOON” REACHES ITS STUNNING CONCLUSION! Lunella and Devil's adventure took them across space - now they're going through time! Hey, didn't Devil used to have a different partner? Devil makes the hardest choice of all...
-      </p>
+      />
     </div>
   </div>
 </div>
