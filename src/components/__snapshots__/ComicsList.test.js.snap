@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComicsList should render correctly in "debug" mode 1`] = `
+<div
+  className="four columns header bordered-box"
+>
+  <h4>
+    Comics List
+  </h4>
+  <hr />
+  <ComicsListItem />
+  <ComicsListItem />
+</div>
+`;
