@@ -37,7 +37,7 @@ class ComicsSerializer {
       );
       comic.title = item.title || "No Title";
       comic.description = item.description;
-      comic.urls = item.urls.find(url => url.type === "purchase").url;
+      comic.purchaseLink = item.urls.find(url => url.type === "purchase").url;
       comic.date = this.formatDate(
         item.dates.find(date => date.type === "focDate").date
       );

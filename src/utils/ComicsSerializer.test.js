@@ -149,6 +149,8 @@ it("renders without crashing", () => {
         }
       ],
       price: "$3.99",
+      purchaseLink:
+        "http://comicstore.marvel.com/Champions-6/digital-comic/51716?utm_campaign=apiRef&utm_source=e4d9813c604e68af2b80750496961901",
       characters: [
         {
           id: 0,
@@ -164,8 +166,12 @@ it("renders without crashing", () => {
       coverPath: "test.jpg",
       pageCount: 32,
       title: "Champions (2019) #6",
-      urls:
-        "http://comicstore.marvel.com/Champions-6/digital-comic/51716?utm_campaign=apiRef&utm_source=e4d9813c604e68af2b80750496961901"
+      writer: {
+        id: 0,
+        name: "writer name",
+        resourceURI: "http://gateway.marvel.com/v1/public/creators/13215",
+        role: "writer"
+      }
     }
   ];
 

@@ -4,11 +4,15 @@ exports[`Header should render correctly in "debug" mode 1`] = `
 <header
   className="twelve columns header"
 >
-  <h1>
-    Comic Advisor
-  </h1>
-  <h5>
-    What should I read today?
-  </h5>
+  <div
+    className="title"
+  >
+    <h1>
+      What should I read today?
+    </h1>
+    <h5>
+      - The incredible MARVEL Comic Advisor -
+    </h5>
+  </div>
 </header>
 `;

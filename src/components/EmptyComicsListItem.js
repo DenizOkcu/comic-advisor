@@ -6,7 +6,7 @@ const ComicsListItem = ({ comic, selectComic }) => {
     <Row>
       <section className="empty-comics-list-item">
         <div className="four columns">
-          <img className="thumb" />
+          <img className="list-item-cover" />
         </div>
         <div className="eight columns">
           <Row>

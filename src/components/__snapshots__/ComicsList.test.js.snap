@@ -4,10 +4,6 @@ exports[`ComicsList should render correctly in "debug" mode 1`] = `
 <aside
   className="four columns"
 >
-  <h4>
-    Comics List
-  </h4>
-  <hr />
   <ComicsListItem
     comic={
       Object {

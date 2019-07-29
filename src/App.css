@@ -106,7 +106,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 300;
 }
 h1 {
@@ -131,8 +131,8 @@ h4 {
 }
 h5 {
   font-size: 1.8rem;
-  line-height: 1.5;
-  letter-spacing: -0.05rem;
+  line-height: 1.2;
+  letter-spacing: 0.55rem;
 }
 h6 {
   font-size: 1.5rem;
@@ -196,16 +196,8 @@ img {
 }
 
 /*components*/
-.list-item-title {
-  font-weight: bold;
-}
 
-.comics-list-item {
-  cursor: pointer;
-  display: inline-block;
-}
-
-.empty-comics-list-item .long-text {
+.long-text {
   background-color: #ccc;
   height: 18px;
   width: 85%;
@@ -213,18 +205,10 @@ img {
   border-radius: 2px;
 }
 
-.empty-comics-list-item .short-text {
+.short-text {
   background-color: #ccc;
   height: 18px;
   width: 50%;
   margin: 0 5px 10px;
-  border-radius: 2px;
-}
-
-.thumb {
-  min-width: 90px;
-  min-height: 139px;
-  display: inline-block;
-  background-color: #ccc;
   border-radius: 2px;
 }

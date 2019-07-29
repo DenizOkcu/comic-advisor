@@ -1,0 +1,38 @@
+.detail-title {
+  margin: 3px;
+  font-size: 1.5em;
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.25rem;
+}
+.details {
+  border-radius: 2px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 10px 10px 10px;
+  box-shadow: 2px 2px 5px #eee;
+}
+
+.cover {
+  min-width: 220px;
+  min-height: 338px;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.primary-button {
+  background-color: red;
+  font-family: "Bangers", cursive;
+  color: white;
+  padding: 0.05em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+  border-radius: 5px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+}

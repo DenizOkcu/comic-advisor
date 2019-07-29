@@ -1,10 +1,13 @@
 import React from "react";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <header className="twelve columns header">
-      <h1>Comic Advisor</h1>
-      <h5>What should I read today?</h5>
+    <header>
+      <div className="title">
+        <h1>What should I read today?</h1>
+        <h5>- The incredible MARVEL Comic Advisor -</h5>
+      </div>
     </header>
   );
 };

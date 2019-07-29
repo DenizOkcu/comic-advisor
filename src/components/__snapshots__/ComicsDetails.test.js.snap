@@ -1,57 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
-<main>
+<div>
   <article
     className="eight columns hide-on-small"
   >
-    <h4>
-      Comics Details
-    </h4>
-    <hr />
-    <Row>
-      <div
-        className="twelve columns"
-      >
-        <h5
-          className="detail-title"
+    <div
+      className="details"
+    >
+      <Row>
+        <div
+          className="twelve columns"
         >
-          <b>
+          <p
+            className="detail-title"
+          >
             title
-          </b>
-        </h5>
-      </div>
-    </Row>
-    <Row>
-      <div
-        className="five columns"
-      >
-        <img
-          alt="title"
-          className="detail-img"
-        />
-      </div>
-      <div
-        className="seven columns"
-      >
-        <ComicDetailsCharacters />
-        <ComicDetailsCreators
-          creators={
-            Array [
-              Object {
-                "name": "writer name",
-              },
-            ]
-          }
-        />
-        <div>
-          <b>
-            Release:
-          </b>
-           
+          </p>
         </div>
-      </div>
-    </Row>
+      </Row>
+      <Row>
+        <div
+          className="five columns"
+        >
+          <img
+            alt="title"
+            className="cover"
+          />
+        </div>
+        <div
+          className="seven columns"
+        >
+          <ComicDetailsCharacters />
+          <ComicDetailsCreators
+            creators={
+              Array [
+                Object {
+                  "name": "writer name",
+                },
+              ]
+            }
+          />
+          <div>
+            <b>
+              Release:
+            </b>
+             
+          </div>
+        </div>
+      </Row>
+      <Row>
+        <div
+          className="twelve columns"
+        >
+          <a
+            className=" primary-button"
+            target="_blank"
+          >
+            Buy this issue
+          </a>
+        </div>
+      </Row>
+    </div>
   </article>
-</main>
+</div>
 `;

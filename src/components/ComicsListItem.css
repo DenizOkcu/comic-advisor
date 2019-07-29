@@ -1,0 +1,26 @@
+.active,
+.list-item:hover {
+  background-color: #eee;
+}
+
+.list-item-title {
+  font-weight: bold;
+  margin: 3px 5px 0 0;
+}
+
+.list-item {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  box-shadow: 2px 2px 5px #eee;
+}
+
+.list-item-cover {
+  min-width: 90px;
+  min-height: 139px;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 2px;
+}
