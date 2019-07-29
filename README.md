@@ -71,31 +71,36 @@ Happy coding & good luck! 🚀
 
 _Please provide your documentation and outline your choices._
 
-I enjoy reading good comic books. But nowadays is it very hard to find them without visiting a comic book store. So I built a "Comic Book Adviser" that can give you rfesh inspiration, what to read next.
+I enjoy reading good comic books. But nowadays it is very hard to find them without visiting a comic book store. So I built a "Comic Book Adviser" that can give you fresh inspiration, on the go.
 
 The app is devided into a list and a detail section.
-Both are resizing depending on the width of thhe screen.
+Both are resizing depending on the width of the screen.
 Mayor break points are
 
 - at 550px for smartphones in portrait mode and
-- at 860px for tablets aore smartphones in landscape mode
+- at 860px for tablets or smartphones in landscape mode
 
 I decided to start with the following layouts from here:
 
-<img src="./docs/part-1-mobile-detail-view.png" style="max-height:350px">
-<img src="./docs/part-1-mobile-list-view.png" style="max-height:350px">
+<img src="./docs/part-1-mobile-detail-view.png">
 
-A one column Design for small screen-sizes with a modal view for the details. Maximizing the screen real estate for this visual medium. I am a typical 'one hand smartphone user', so I optimzed the button locations for maximum thumb-friendliness.
+A one column Design for small screen-sizes with a modal view for the details.
 
-<img src="./docs/part-1-tablet-view.png" style="max-height:350px">
+<img src="./docs/part-1-mobile-list-view.png">
 
-A two columns design, that focuses on the comic book covers with a list and a detailview for bigger Devices.
+Maximizing the screen real estate for this visual medium. I am a typical 'one hand smartphone user', so I optimzed the button locations for maximum thumb-friendliness (for a right handed person for now).
 
-<img src="./docs/part-1-desktop-view.png" style="max-height:350px">
+<img src="./docs/part-1-tablet-view.png">
 
-A two column design that gives even more space for details and the selected cover at one glance on 'desktop screens.'
+A two columns 50/50 design, that focuses on the comic book covers with a list and a detail view for bigger Devices.
 
-Here is an outline of my thoughts and the things that I did during PART 1.
+<img src="./docs/part-1-desktop-view.png">
+
+A two column 33/66 design that gives even more space for details and the selected cover at one glance on 'desktop screens.'
+
+The brilliance of the colors, the art and the minimalism of the surrounding application was a strong reason for the different decisions during the two parts.
+
+Here is an outline of my thoughts and reasoning behind the tasks that I did during PART 1 and 2.
 
 ### Part 1
 
@@ -106,8 +111,65 @@ Here is an outline of my thoughts and the things that I did during PART 1.
 - creating a validator/serializer to keep the 'circle of trust' as clean as possible
 - trying out different worklflows for using React, as it is fairly new to me (CRA was a great help)
 - focusing on readability by destructuring the props and keeping complexity down
-- introducing a 'comic book style' font to enhance the experience
+- introducing a minimal 'comic book style' design to enhance the experience
 - utilizing flexbox for speed and realiability, because using a framework would have been way to much overhead for a simple view like this one
 - adjusting tests and optimizing data validation while trying to focus on the minimalistic visuals, so that the comic book covers can shine
 
-See you on branch part-2
+### Part 2
+
+- adding the external API to the mix. Here I used one of the few dependencies outside of 'create-react-app'. I decided to go with axios. The request that this app does are limited to one GET call, which could have been done with `fetch` as well.
+- This is a client side app with a public key: Authentication is done by Marvel via CORS. Please let me know which hosts I should register for you in the Developer Portal (deniz.okcu@gmail.com). Requests are limited up to 3000/day. For now `localhost` works: Starting the app with `yarn start` from your local machine should give you access to the endpoint.
+- adding more 'app like feel' on mobile devices by adding animations for the detail view in portait mode.
+- adding more engagement with a call to action button to restart the the randomly generated request. I tried out using react-router-dom, but decided against it, to keep the complexity as low as possible while time is a contraint. I clearly know it is bad practice, to let the browser reload the full app, while react is optimized to just refresh the changed nodes!
+- adding a link into the Comic knowledgebase or the shop depending on availability
+
+Surprisingly, I enjoyed the app the most in portrait mode on a smartphone. You should definitly connect to you computer via wifi and try it out!
+
+---
+
+## <img src="./docs/part-2-mobile-detail-view.png">
+
+## <img src="./docs/part-2-mobile-list-view.png">
+
+## <img src="./docs/part-2-tablet-view.png">
+
+## <img src="./docs/part-2-desktop-view.png">
+
+---
+
+### Tests and Folder Structure
+
+After looking into different test frameworks I decided to test the components with snaphots tests (jest + enzyme). The serializer is one possible example for a unit test.
+
+Having a non-opinionated library helps with flexibility, but leaves also space for discussions: For the folder structure I opted for
+
+- one folder for components, where most of the components have one additional .css and .test file.
+- one folder for data (Part 1: mock data, part 2: test data)
+- one folder for utilities and
+- one folder for configuration
+
+The size of the app will decide how far this is future proof.
+
+### What I left out (but would have loved to continue - in no particular order):
+
+- adding routes and more pages
+- adding more gamification, like a view list of collectable book covers or bookmarks
+- making the pages sharable and deterministic by putting ids into the url
+- adding an entry page where you can enter any numkber that will have an effect to the results
+- a neural network that helps findeng better results (synaptic.js is amazing)
+- adding a request service for better code structure
+- adding a storage service to cache the requests locally
+- refining the overall appeareance and accessability
+- better tests
+- react hooks
+- use prop-types
+- use validation library like Joi
+
+### Risks and Limitations
+
+I am aware, that it was a big risk to go into an important task like this, with no day-to-day experience with React. This is no excuse! It just showed me again, how effective 'learning by doing' is. I belive I haven't learned as much during the last months as I have in the last days. My biggest limitation was clearly the missing experience.
+
+I am very grateful for this opportunity. And I am looking forward to talk to you soon.
+Let me know if anything is not clear. I will try my best.
+
+Cheers, Deniz
