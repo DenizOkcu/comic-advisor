@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
+exports[`ComicsListItem should render correctly a nonactive list item 1`] = `
 <section
   className="list-item"
   onClick={[Function]}
@@ -9,7 +9,8 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
     className="list-item-cover"
   >
     <img
-      alt="title"
+      alt="Superman"
+      src="cover.png"
     />
   </div>
   <div
@@ -17,7 +18,79 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
   >
     <div>
       <b>
-        title
+        Superman
+      </b>
+    </div>
+    <div
+      className=""
+    >
+      by 
+      Bernd
+    </div>
+    <div
+      className=""
+    >
+      Price: 
+    </div>
+  </div>
+</section>
+`;
+
+exports[`ComicsListItem should render correctly an active list item 1`] = `
+<section
+  className="list-item active"
+  onClick={[Function]}
+>
+  <div
+    className="list-item-cover"
+  >
+    <img
+      alt="Superman"
+      src="cover.png"
+    />
+  </div>
+  <div
+    className="list-item-description"
+  >
+    <div>
+      <b>
+        Superman
+      </b>
+    </div>
+    <div
+      className=""
+    >
+      by 
+      Bernd
+    </div>
+    <div
+      className=""
+    >
+      Price: 
+    </div>
+  </div>
+</section>
+`;
+
+exports[`ComicsListItem should render correctly without writer 1`] = `
+<section
+  className="list-item active"
+  onClick={[Function]}
+>
+  <div
+    className="list-item-cover"
+  >
+    <img
+      alt="Superman"
+      src="cover.png"
+    />
+  </div>
+  <div
+    className="list-item-description"
+  >
+    <div>
+      <b>
+        Superman
       </b>
     </div>
     <div

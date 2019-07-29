@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComicDetailsCreators should render correctly in "debug" mode 1`] = `
+exports[`ComicDetailsCharacters should render correctly in "debug" mode 1`] = `
 <section>
   <b>
-    Created by:
+    Characters in this issue:
   </b>
   <ul>
     <li
       key="0"
     >
-      Bernd (writer)
+      IronMan
     </li>
     <li
       key="1"
     >
-      Klaus (inker)
+      Hulk
     </li>
   </ul>
 </section>

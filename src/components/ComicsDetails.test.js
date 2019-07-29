@@ -2,18 +2,64 @@ import React from "react";
 import { shallow } from "enzyme";
 import ComicsDetails from "./ComicsDetails";
 
+let comic;
+let clickToCloseDetails;
+
+beforeEach(() => {
+  comic = {
+    id: 1,
+    writer: { name: "Bernd", role: "writer" },
+    prices: [{ price: 3.99 }],
+    title: "Superman",
+    coverPath: "cover.png",
+    pageCount: 32
+  };
+  clickToCloseDetails = jest.fn();
+});
+
 describe("ComicsDetails", () => {
-  it('should render correctly in "debug" mode', () => {
-    const comic = {
-      id: 1,
-      creators: [{ name: "writer name" }],
-      thumbnail: { path: "test", extension: "jpg" },
-      prices: [{ price: 3.99 }],
-      title: "title",
-      pageCount: 32
-    };
-    const component = shallow(<ComicsDetails comic={comic} debug />);
+  it("should render hidden on mobile", () => {
+    const component = shallow(
+      <ComicsDetails
+        comic={comic}
+        detailsHiddenOnMobile={true}
+        clickToCloseDetails={clickToCloseDetails}
+        debug={jest.fn()}
+      />
+    );
 
     expect(component).toMatchSnapshot();
+  });
+});
+
+describe("ComicsDetails", () => {
+  it("should not render hidden on mobile", () => {
+    const component = shallow(
+      <ComicsDetails
+        comic={comic}
+        detailsHiddenOnMobile={false}
+        clickToCloseDetails={clickToCloseDetails}
+        debug={jest.fn()}
+      />
+    );
+
+    expect(component).toMatchSnapshot();
+  });
+});
+
+describe("ComicsDetails", () => {
+  it("should call mobile detail close function", () => {
+    const component = shallow(
+      <ComicsDetails
+        comic={comic}
+        detailsHiddenOnMobile={false}
+        clickToCloseDetails={clickToCloseDetails}
+        debug={jest.fn()}
+      />
+    );
+
+    expect(clickToCloseDetails.mock.calls.length).toEqual(0);
+    component.find(".close-details").simulate("click");
+    expect(clickToCloseDetails.mock.calls.length).toEqual(1);
   });
 });

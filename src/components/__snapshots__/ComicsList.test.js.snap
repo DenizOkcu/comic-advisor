@@ -1,32 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComicsList should render correctly in "debug" mode 1`] = `
+exports[`ComicsList should render active item first 1`] = `
 <aside
   className="comics-list"
 >
   <ComicsListItem
+    active={true}
     comic={
       Object {
-        "creators": Array [
-          Object {
-            "name": "writer name",
-          },
-        ],
+        "coverPath": "cover.png",
         "id": 1,
         "pageCount": 32,
-        "prices": Array [
-          Object {
-            "price": 3.99,
-          },
-        ],
-        "thumbnail": Object {
-          "extension": "jpg",
-          "path": "test",
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
         },
-        "title": "title",
       }
     }
     key="1"
+    selectComic={[MockFunction]}
+  />
+  <ComicsListItem
+    active={false}
+    comic={
+      Object {
+        "coverPath": "cover.png",
+        "id": 2,
+        "pageCount": 32,
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
+        },
+      }
+    }
+    key="2"
+    selectComic={[MockFunction]}
+  />
+</aside>
+`;
+
+exports[`ComicsList should render active item second 1`] = `
+<aside
+  className="comics-list"
+>
+  <ComicsListItem
+    active={false}
+    comic={
+      Object {
+        "coverPath": "cover.png",
+        "id": 1,
+        "pageCount": 32,
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
+        },
+      }
+    }
+    key="1"
+    selectComic={[MockFunction]}
+  />
+  <ComicsListItem
+    active={true}
+    comic={
+      Object {
+        "coverPath": "cover.png",
+        "id": 2,
+        "pageCount": 32,
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
+        },
+      }
+    }
+    key="2"
+    selectComic={[MockFunction]}
   />
 </aside>
 `;

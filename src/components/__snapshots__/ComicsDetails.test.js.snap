@@ -1,18 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
+exports[`ComicsDetails should not render hidden on mobile 1`] = `
 <article
   className="details"
 >
   <div
     className="close-details hidden-on-gt-mobile"
+    onClick={[MockFunction]}
   >
     close
   </div>
   <p
     className="detail-title"
   >
-    title
+    Superman
   </p>
   <div
     className="detail-cover-text-container"
@@ -21,23 +22,64 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
       className="detail-cover"
     >
       <img
-        alt="title"
+        alt="Superman"
         className=""
+        src="cover.png"
       />
     </div>
     <div
       className="detail-text"
     >
       <ComicDetailsCharacters />
-      <ComicDetailsCreators
-        creators={
-          Array [
-            Object {
-              "name": "writer name",
-            },
-          ]
-        }
+      <ComicDetailsCreators />
+      <b>
+        Release:
+      </b>
+       
+    </div>
+  </div>
+  <a
+    className=" primary-button"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Buy this issue for 
+  </a>
+</article>
+`;
+
+exports[`ComicsDetails should render hidden on mobile 1`] = `
+<article
+  className="details hidden-on-mobile"
+>
+  <div
+    className="close-details hidden-on-gt-mobile"
+    onClick={[MockFunction]}
+  >
+    close
+  </div>
+  <p
+    className="detail-title"
+  >
+    Superman
+  </p>
+  <div
+    className="detail-cover-text-container"
+  >
+    <div
+      className="detail-cover"
+    >
+      <img
+        alt="Superman"
+        className=""
+        src="cover.png"
       />
+    </div>
+    <div
+      className="detail-text"
+    >
+      <ComicDetailsCharacters />
+      <ComicDetailsCreators />
       <b>
         Release:
       </b>

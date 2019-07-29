@@ -2,7 +2,7 @@
 // serializer bauen
 
 class ComicsSerializer {
-  formatPrice = priceString => `$${priceString}`;
+  formatPrice = priceString => priceString && `$${priceString}`;
   formatDate = dateString => {
     let date = new Date(Date.parse(dateString)).toDateString();
     return date !== "Invalid Date" ? date : "No Date available";
@@ -30,15 +30,19 @@ class ComicsSerializer {
         return character;
       });
       comic.id = item.id;
-      comic.pageCount = item.pageCount;
+      comic.pageCount = item.pageCount || "-";
       comic.price = this.formatPrice(
         item.prices.find(price => price.type === "printPrice").price || "-"
       );
       comic.title = item.title || "No Title";
       comic.description = item.description;
-      comic.purchaseLink = item.urls.find(url => url.type === "purchase").url;
+      comic.purchaseLink = item.urls.find(
+        url => url.type === "purchase" || url.type === "detail"
+      ).url;
       comic.date = this.formatDate(
-        item.dates.find(date => date.type === "focDate").date
+        item.dates.find(
+          date => date.type === "focDate" || date.type === "onsaleDate"
+        ).date
       );
 
       comics.push(comic);
