@@ -136,18 +136,36 @@ it("renders without crashing", () => {
   };
   const comics = [
     {
+      date: "Mon May 20 2019",
+      description: null,
       id: 73809,
+      issueNumber: 6,
       creators: [
         {
+          id: 0,
           name: "writer name",
           resourceURI: "http://gateway.marvel.com/v1/public/creators/13215",
           role: "writer"
         }
       ],
-      price: 3.99,
+      price: "$3.99",
+      characters: [
+        {
+          id: 0,
+          name: "Dust",
+          resourceURI: "http://gateway.marvel.com/v1/public/characters/1009285"
+        },
+        {
+          id: 1,
+          name: "Ms. Marvel (Kamala Khan)",
+          resourceURI: "http://gateway.marvel.com/v1/public/characters/1017577"
+        }
+      ],
       coverPath: "test.jpg",
       pageCount: 32,
-      title: "Champions (2019) #6"
+      title: "Champions (2019) #6",
+      urls:
+        "http://comicstore.marvel.com/Champions-6/digital-comic/51716?utm_campaign=apiRef&utm_source=e4d9813c604e68af2b80750496961901"
     }
   ];
 

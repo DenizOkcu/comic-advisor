@@ -2,26 +2,47 @@
 // serializer bauen
 
 class ComicsSerializer {
-  serialize(response) {
-    const comics = [];
+  formatPrice = priceString => `$${priceString}`;
+  formatDate = dateString => {
+    let date = new Date(Date.parse(dateString)).toDateString();
+    return date != "Invalid Date" ? date : "No Date available";
+  };
+
+  serialize = response => {
+    let comics = [];
 
     response.data.results.map(item => {
       let comic = {};
 
-      comic.id = item.id;
-      comic.creators = item.creators.items;
-      comic.price = item.prices.find(
-        price => price.type === "printPrice"
-      ).price;
       comic.coverPath = `${item.thumbnail.path}.${item.thumbnail.extension}`;
+      comic.creators = item.creators.items.map((creator, index) => {
+        creator.id = index;
+        return creator;
+      });
+      comic.characters = item.characters.items.map((character, index) => {
+        character.id = index;
+        return character;
+      });
+      comic.id = item.id;
+      comic.issueNumber = item.issueNumber;
       comic.pageCount = item.pageCount;
+      comic.price = this.formatPrice(
+        item.prices.find(price => price.type === "printPrice").price
+      );
       comic.title = item.title;
+      comic.description = item.description;
+      comic.urls = item.urls.find(url => url.type === "purchase").url;
+      comic.date = this.formatDate(
+        item.dates.find(date => date.type === "focDate").date
+      );
 
       comics.push(comic);
     });
+    // add price and date formatter
+    // add prop types
 
     return comics;
-  }
+  };
 }
 
 export default ComicsSerializer;

@@ -26,7 +26,7 @@ const comics = {
         ean: "",
         issn: "",
         format: "Comic",
-        pageCount: 32,
+        pageCount: 31,
         textObjects: [],
         resourceURI: "http://gateway.marvel.com/v1/public/comics/73809",
         urls: [
@@ -55,7 +55,7 @@ const comics = {
           },
           {
             type: "focDate",
-            date: "2019-05-20T00:00:00-0400"
+            date: "asdf"
           }
         ],
         prices: [
@@ -208,7 +208,7 @@ const comics = {
           },
           {
             type: "focDate",
-            date: "2019-05-20T00:00:00-0400"
+            date: "2015-05-20T00:00:00-0400"
           }
         ],
         prices: [
@@ -366,13 +366,13 @@ const comics = {
           },
           {
             type: "focDate",
-            date: "2019-05-20T00:00:00-0400"
+            date: "2016-05-20T00:00:00-0400"
           }
         ],
         prices: [
           {
             type: "printPrice",
-            price: 3.99
+            price: 3.89
           }
         ],
         thumbnail: {
