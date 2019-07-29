@@ -12,7 +12,7 @@ const ComicsDetails = ({ comic }) => {
   // size übergeben
 
   return (
-    <main>
+    <div>
       {comic ? (
         <article className="eight columns hide-on-small">
           <h4>Comics Details</h4>
@@ -44,7 +44,7 @@ const ComicsDetails = ({ comic }) => {
       ) : (
         ""
       )}
-    </main>
+    </div>
   );
 };
 

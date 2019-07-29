@@ -199,3 +199,32 @@ img {
 .list-item-title {
   font-weight: bold;
 }
+
+.comics-list-item {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.empty-comics-list-item .long-text {
+  background-color: #ccc;
+  height: 18px;
+  width: 85%;
+  margin: 0 5px 10px;
+  border-radius: 2px;
+}
+
+.empty-comics-list-item .short-text {
+  background-color: #ccc;
+  height: 18px;
+  width: 50%;
+  margin: 0 5px 10px;
+  border-radius: 2px;
+}
+
+.thumb {
+  min-width: 90px;
+  min-height: 139px;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 2px;
+}

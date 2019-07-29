@@ -19,6 +19,12 @@ class ComicsSerializer {
         creator.id = index;
         return creator;
       });
+      comic.writer = comic.creators.find(
+        creator =>
+          creator.role === "writer" ||
+          creator.role === "inker" ||
+          creator.role === "editor"
+      );
       comic.characters = item.characters.items.map((character, index) => {
         character.id = index;
         return character;
@@ -29,7 +35,7 @@ class ComicsSerializer {
       comic.price = this.formatPrice(
         item.prices.find(price => price.type === "printPrice").price
       );
-      comic.title = item.title;
+      comic.title = item.title || "No Title";
       comic.description = item.description;
       comic.urls = item.urls.find(url => url.type === "purchase").url;
       comic.date = this.formatDate(

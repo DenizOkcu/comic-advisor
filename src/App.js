@@ -45,8 +45,10 @@ class App extends Component {
           <Header />
         </Row>
         <Row>
-          <ComicsList comics={comics} selectComic={this.selectComic} />
-          <ComicsDetails comic={selectedComic} />
+          <main>
+            <ComicsList comics={comics} selectComic={this.selectComic} />
+            <ComicsDetails comic={selectedComic} />
+          </main>
         </Row>
       </Container>
     );
