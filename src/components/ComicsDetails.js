@@ -1,6 +1,7 @@
 import React from "react";
 import { Row } from "./grid";
 import ComicDetailsCreators from "./ComicDetailsCreators";
+import ComicDetailsCharacters from "./ComicDetailsCharacters";
 
 const ComicsDetails = ({ comic }) => {
   // zeile 18+19 hier bearbeiten
@@ -18,7 +19,9 @@ const ComicsDetails = ({ comic }) => {
           <hr />
           <Row>
             <div className="twelve columns">
-              <h5 className="detail-title">{comic.title}</h5>
+              <h5 className="detail-title">
+                <b>{comic.title}</b>
+              </h5>
             </div>
           </Row>
           <Row>
@@ -30,7 +33,11 @@ const ComicsDetails = ({ comic }) => {
               />
             </div>
             <div className="seven columns">
+              <ComicDetailsCharacters characters={comic.characters} />
               <ComicDetailsCreators creators={comic.creators} />
+              <div>
+                <b>Release:</b> {comic.date}
+              </div>
             </div>
           </Row>
         </article>

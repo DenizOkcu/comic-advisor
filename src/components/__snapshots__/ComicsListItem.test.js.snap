@@ -31,8 +31,8 @@ exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
       <div
         className="twelve columns"
       >
-        32
-         Pages - $
+        Issue 
+         - 
       </div>
     </Row>
   </div>

@@ -16,7 +16,9 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
         <h5
           className="detail-title"
         >
-          title
+          <b>
+            title
+          </b>
         </h5>
       </div>
     </Row>
@@ -32,6 +34,7 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
       <div
         className="seven columns"
       >
+        <ComicDetailsCharacters />
         <ComicDetailsCreators
           creators={
             Array [
@@ -41,6 +44,12 @@ exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
             ]
           }
         />
+        <div>
+          <b>
+            Release:
+          </b>
+           
+        </div>
       </div>
     </Row>
   </article>

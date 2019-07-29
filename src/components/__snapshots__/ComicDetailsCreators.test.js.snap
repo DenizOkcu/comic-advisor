@@ -2,10 +2,12 @@
 
 exports[`ComicDetailsCreators should render correctly in "debug" mode 1`] = `
 <section>
-  Created by:
+  <b>
+    Created by:
+  </b>
   <ul>
     <li
-      key="writer name"
+      key="0"
     >
       writer name(writer)
     </li>

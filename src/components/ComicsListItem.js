@@ -27,7 +27,7 @@ const ComicsListItem = ({ comic, selectComic }) => {
         </Row>
         <Row>
           <div className="twelve columns">
-            {comic.pageCount} Pages - ${comic.price}
+            Issue {comic.issueNumber} - {comic.price}
           </div>
         </Row>
       </div>

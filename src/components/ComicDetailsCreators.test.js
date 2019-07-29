@@ -4,7 +4,7 @@ import ComicDetailsCreators from "./ComicDetailsCreators";
 
 describe("ComicDetailsCreators", () => {
   it('should render correctly in "debug" mode', () => {
-    const creators = [{ name: "writer name", role: "writer" }];
+    const creators = [{ id: 0, name: "writer name", role: "writer" }];
     const component = shallow(
       <ComicDetailsCreators creators={creators} debug />
     );
