@@ -2,7 +2,7 @@
 
 exports[`ComicsList should render correctly in "debug" mode 1`] = `
 <aside
-  className="four columns"
+  className="comics-list"
 >
   <ComicsListItem
     comic={

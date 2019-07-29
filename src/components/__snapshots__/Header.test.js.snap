@@ -1,18 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly in "debug" mode 1`] = `
-<header
-  className="twelve columns header"
->
-  <div
-    className="title"
-  >
-    <h1>
-      What should I read today?
-    </h1>
-    <h5>
-      - The incredible MARVEL Comic Advisor -
-    </h5>
-  </div>
+<header>
+  <h1>
+    What should I read today?
+  </h1>
+  <h5>
+    Your humble Comic Advisor
+  </h5>
 </header>
 `;

@@ -139,7 +139,6 @@ it("renders without crashing", () => {
       date: "Mon May 20 2019",
       description: null,
       id: 73809,
-      issueNumber: 6,
       creators: [
         {
           id: 0,

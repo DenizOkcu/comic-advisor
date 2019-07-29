@@ -5,7 +5,7 @@ class ComicsSerializer {
   formatPrice = priceString => `$${priceString}`;
   formatDate = dateString => {
     let date = new Date(Date.parse(dateString)).toDateString();
-    return date != "Invalid Date" ? date : "No Date available";
+    return date !== "Invalid Date" ? date : "No Date available";
   };
 
   serialize = response => {
@@ -30,10 +30,9 @@ class ComicsSerializer {
         return character;
       });
       comic.id = item.id;
-      comic.issueNumber = item.issueNumber;
       comic.pageCount = item.pageCount;
       comic.price = this.formatPrice(
-        item.prices.find(price => price.type === "printPrice").price
+        item.prices.find(price => price.type === "printPrice").price || "-"
       );
       comic.title = item.title || "No Title";
       comic.description = item.description;

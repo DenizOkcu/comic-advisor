@@ -1,30 +1,111 @@
+.details {
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #bbb;
+  box-shadow: 2px 2px 5px #eee;
+  cursor: pointer;
+  display: inline-block;
+  height: 99vh;
+  left: 0px;
+  overflow-y: auto;
+  padding: 0 10px 10px 10px;
+  position: fixed;
+  top: 0px;
+}
+
+.close-details {
+  background-color: red;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+  font-family: "Bangers", Arial Black;
+  font-size: 30px;
+  font-weight: bold;
+  height: 44px;
+  position: fixed;
+  right: -13px;
+  text-align: center;
+  top: 50%;
+  transform: rotate(-90deg);
+  vertical-align: middle;
+  width: 92px;
+}
+
+.hidden-on-mobile {
+  display: none;
+}
+
+.detail-text {
+  flex: 1;
+  padding: 10px 0 0;
+}
+
+/* Larger than mobile */
+@media (min-width: 550px) {
+  .details {
+    border-radius: 2px;
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 5px #eee;
+    cursor: pointer;
+    display: inline-block;
+    flex: 1;
+    height: 100%;
+    padding: 0 10px 10px 10px;
+    position: relative;
+  }
+
+  .hidden-on-mobile {
+    display: inline-block;
+  }
+
+  .hidden-on-gt-mobile {
+    display: none;
+  }
+
+  .detail-text {
+    flex: 1;
+    padding: 10px 0 0;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 850px) {
+  .details {
+    border-radius: 2px;
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 5px #eee;
+    cursor: pointer;
+    display: inline-block;
+    flex: 2;
+    padding: 0 10px 10px 10px;
+  }
+
+  .detail-cover-text-container {
+    display: flex;
+  }
+
+  .detail-cover {
+    flex: 1;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+
+  .detail-text {
+    flex: 1;
+    padding: 0 0 0 13px;
+  }
+}
+
 .detail-title {
   margin: 3px;
   font-size: 1.5em;
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", Arial Black;
   letter-spacing: 0.25rem;
-}
-.details {
-  border-radius: 2px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0 10px 10px 10px;
-  box-shadow: 2px 2px 5px #eee;
-}
-
-.cover {
-  min-width: 220px;
-  min-height: 338px;
-  display: inline-block;
-  background-color: #ccc;
-  border-radius: 2px;
-  margin-bottom: 10px;
 }
 
 .primary-button {
   background-color: red;
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", Arial Black;
   color: white;
   padding: 0.05em 0;
   text-decoration: none;

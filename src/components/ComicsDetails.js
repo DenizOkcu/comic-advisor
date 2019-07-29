@@ -1,48 +1,59 @@
 import React from "react";
-import { Row } from "./grid";
-import EmptyComicsDetails from "./EmptyComicsDetails";
+
 import ComicDetailsCreators from "./ComicDetailsCreators";
 import ComicDetailsCharacters from "./ComicDetailsCharacters";
+
 import "./ComicsDetails.css";
 
-const ComicsDetails = ({ comic }) => {
-  // TODO: loading placeholder
+// renders the detail view
+// it is a hidden modal in mobile portait mode
+// which can be shown by selecting a comic from the list view
+// it consists of the cover image and information about
+// creators and characters
+// a button leads to the external comic book shop
+const ComicsDetails = ({
+  comic,
+  detailsHiddenOnMobile,
+  clickToCloseDetails
+}) => {
   const comicDetail = comic && (
-    <article className="eight columns hide-on-small">
-      <div className="details">
-        <Row>
-          <div className="twelve columns">
-            <p className="detail-title">{comic.title}</p>
-          </div>
-        </Row>
-        <Row>
-          <div className="five columns">
-            <img src={comic.coverPath} className="cover" alt={comic.title} />
-          </div>
-          <div className="seven columns">
-            <ComicDetailsCharacters characters={comic.characters} />
-            <ComicDetailsCreators creators={comic.creators} />
-            <div>
-              <b>Release:</b> {comic.date}
-            </div>
-          </div>
-        </Row>
-        <Row>
-          <div className="twelve columns">
-            <a
-              href={comic.purchaseLink}
-              target="_blank"
-              className=" primary-button"
-            >
-              Buy this issue
-            </a>
-          </div>
-        </Row>
+    <article
+      className={"details" + (detailsHiddenOnMobile ? " hidden-on-mobile" : "")}
+    >
+      {/* a close button for the mobile modal view */}
+      <div
+        onClick={clickToCloseDetails}
+        className="close-details hidden-on-gt-mobile"
+      >
+        close
       </div>
+
+      <p className="detail-title">{comic.title}</p>
+
+      <div className="detail-cover-text-container">
+        <div className="detail-cover">
+          <img src={comic.coverPath} className="" alt={comic.title} />
+        </div>
+
+        <div className="detail-text">
+          <ComicDetailsCharacters characters={comic.characters} />
+          <ComicDetailsCreators creators={comic.creators} />
+          <b>Release:</b> {comic.date}
+        </div>
+      </div>
+
+      <a
+        href={comic.purchaseLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className=" primary-button"
+      >
+        Buy this issue for {comic.price}
+      </a>
     </article>
   );
 
-  return <div>{comicDetail || <EmptyComicsDetails />}</div>;
+  return comicDetail;
 };
 
 export default ComicsDetails;

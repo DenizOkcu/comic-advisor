@@ -1,7 +1,7 @@
-.title {
+header {
   display: flex;
   flex-direction: column;
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", Arial Black;
   margin: 10px 0;
   text-align: center;
 }

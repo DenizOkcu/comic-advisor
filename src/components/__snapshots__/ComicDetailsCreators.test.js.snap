@@ -9,7 +9,7 @@ exports[`ComicDetailsCreators should render correctly in "debug" mode 1`] = `
     <li
       key="0"
     >
-      writer name(writer)
+      writer name (writer)
     </li>
   </ul>
 </section>

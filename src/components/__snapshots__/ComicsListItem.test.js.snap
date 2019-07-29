@@ -1,44 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComicsListItem should render correctly in "debug" mode 1`] = `
-<Row>
-  <section
-    className="list-item"
-    onClick={[Function]}
+<section
+  className="list-item"
+  onClick={[Function]}
+>
+  <div
+    className="list-item-cover"
   >
-    <div
-      className="four columns"
-    >
-      <img
-        alt="title"
-        className="list-item-cover"
-      />
+    <img
+      alt="title"
+    />
+  </div>
+  <div
+    className="list-item-description"
+  >
+    <div>
+      <b>
+        title
+      </b>
     </div>
     <div
-      className="eight columns "
+      className=""
     >
-      <Row>
-        <div
-          className="twelve columns list-item-title"
-        >
-          title
-        </div>
-      </Row>
-      <Row>
-        <div
-          className="twelve columns"
-        >
-          Price: 
-        </div>
-      </Row>
-      <Row>
-        <div
-          className="twelve columns"
-        >
-          Issue: 
-        </div>
-      </Row>
+      Price: 
     </div>
-  </section>
-</Row>
+  </div>
+</section>
 `;

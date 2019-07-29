@@ -1,67 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComicsDetails should render correctly in "debug" mode 1`] = `
-<div>
-  <article
-    className="eight columns hide-on-small"
+<article
+  className="details"
+>
+  <div
+    className="close-details hidden-on-gt-mobile"
+  >
+    close
+  </div>
+  <p
+    className="detail-title"
+  >
+    title
+  </p>
+  <div
+    className="detail-cover-text-container"
   >
     <div
-      className="details"
+      className="detail-cover"
     >
-      <Row>
-        <div
-          className="twelve columns"
-        >
-          <p
-            className="detail-title"
-          >
-            title
-          </p>
-        </div>
-      </Row>
-      <Row>
-        <div
-          className="five columns"
-        >
-          <img
-            alt="title"
-            className="cover"
-          />
-        </div>
-        <div
-          className="seven columns"
-        >
-          <ComicDetailsCharacters />
-          <ComicDetailsCreators
-            creators={
-              Array [
-                Object {
-                  "name": "writer name",
-                },
-              ]
-            }
-          />
-          <div>
-            <b>
-              Release:
-            </b>
-             
-          </div>
-        </div>
-      </Row>
-      <Row>
-        <div
-          className="twelve columns"
-        >
-          <a
-            className=" primary-button"
-            target="_blank"
-          >
-            Buy this issue
-          </a>
-        </div>
-      </Row>
+      <img
+        alt="title"
+        className=""
+      />
     </div>
-  </article>
-</div>
+    <div
+      className="detail-text"
+    >
+      <ComicDetailsCharacters />
+      <ComicDetailsCreators
+        creators={
+          Array [
+            Object {
+              "name": "writer name",
+            },
+          ]
+        }
+      />
+      <b>
+        Release:
+      </b>
+       
+    </div>
+  </div>
+  <a
+    className=" primary-button"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Buy this issue for 
+  </a>
+</article>
 `;

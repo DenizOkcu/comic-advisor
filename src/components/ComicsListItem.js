@@ -1,5 +1,5 @@
 import React from "react";
-import { Row } from "./grid";
+
 import "./ComicsListItem.css";
 
 const ComicsListItem = ({ comic, active, selectComic }) => {
@@ -7,39 +7,26 @@ const ComicsListItem = ({ comic, active, selectComic }) => {
     selectComic(comic.id);
   };
 
+  // renders a list item that can select a comic
+  // and that can have an active state while being selected
   return (
-    <Row>
-      <section
-        className={"list-item" + (active ? " active" : "")}
-        onClick={clickToSelectComic}
-      >
-        <div className="four columns">
-          <img
-            src={comic.coverPath}
-            className="list-item-cover"
-            alt={comic.title}
-          />
+    <section
+      className={"list-item" + (active ? " active" : "")}
+      onClick={clickToSelectComic}
+    >
+      <div className="list-item-cover">
+        <img src={comic.coverPath} alt={comic.title} />
+      </div>
+
+      <div className="list-item-description">
+        <div>
+          <b>{comic.title}</b>
         </div>
-        <div className="eight columns ">
-          <Row>
-            <div className="twelve columns list-item-title">{comic.title}</div>
-          </Row>
-          {comic.writer ? (
-            <Row>
-              <div className="twelve columns">by {comic.writer.name}</div>
-            </Row>
-          ) : (
-            ""
-          )}
-          <Row>
-            <div className="twelve columns">Price: {comic.price}</div>
-          </Row>
-          <Row>
-            <div className="twelve columns">Issue: {comic.issueNumber}</div>
-          </Row>
-        </div>
-      </section>
-    </Row>
+        {/* the writer can be empty due to different possible roles */}
+        {comic.writer ? <div className="">by {comic.writer.name}</div> : ""}
+        <div className="">Price: {comic.price}</div>
+      </div>
+    </section>
   );
 };
 

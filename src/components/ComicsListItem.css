@@ -1,26 +1,29 @@
-.active,
-.list-item:hover {
-  background-color: #eee;
-}
-
-.list-item-title {
-  font-weight: bold;
-  margin: 3px 5px 0 0;
-}
-
 .list-item {
   border-radius: 2px;
   border: 1px solid #ccc;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 10px;
   box-shadow: 2px 2px 5px #eee;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .list-item-cover {
-  min-width: 90px;
-  min-height: 139px;
-  display: inline-block;
-  background-color: #ccc;
+  flex: 1;
   border-radius: 2px;
+}
+
+.list-item-description {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 3px 3px 0 10px;
+}
+
+/* only show active and hover effects in the master/detail view */
+@media (min-width: 550px) {
+  .list-item.active,
+  .list-item:hover {
+    background-color: #eee;
+  }
 }
