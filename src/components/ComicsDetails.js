@@ -18,7 +18,10 @@ const ComicsDetails = ({
 }) => {
   const comicDetail = comic && (
     <article
-      className={"details" + (detailsHiddenOnMobile ? " hidden-on-mobile" : "")}
+      className={
+        "details" +
+        (detailsHiddenOnMobile ? " hidden-on-mobile" : " visible-on-mobile")
+      }
     >
       {/* a close button for the mobile modal view */}
       <div

@@ -11,6 +11,19 @@
   padding: 0 10px 10px 10px;
   position: fixed;
   top: 0px;
+  z-index: 10;
+  transition: transform 800ms ease-in-out;
+}
+
+/* animates the details view to slide in... */
+.details.hidden-on-mobile {
+  transform: translate(-600px);
+  display: inline-block;
+}
+/* ... and out */
+.details.visible-on-mobile {
+  transform: translate(0px);
+  display: inline-block;
 }
 
 .close-details {
@@ -52,6 +65,13 @@
     height: 100%;
     padding: 0 10px 10px 10px;
     position: relative;
+  }
+
+  /* keine animation intablet und desktop */
+  .details.hidden-on-mobile,
+  .details.visible-on-mobile {
+    transform: translate(0px);
+    display: inline-block;
   }
 
   .hidden-on-mobile {
