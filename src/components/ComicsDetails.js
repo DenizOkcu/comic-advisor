@@ -1,5 +1,6 @@
 import React from "react";
 
+import RedButton from "./RedButton";
 import ComicDetailsCreators from "./ComicDetailsCreators";
 import ComicDetailsCharacters from "./ComicDetailsCharacters";
 
@@ -45,14 +46,12 @@ const ComicsDetails = ({
         </div>
       </div>
 
-      <a
-        href={comic.purchaseLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className=" primary-button"
-      >
-        Learn More...
-      </a>
+      <RedButton
+        link={comic.purchaseLink}
+        text={"Learn more..."}
+        classes={["primary-button"]}
+        blank={true}
+      />
     </article>
   );
 

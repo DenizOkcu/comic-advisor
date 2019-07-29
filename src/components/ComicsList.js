@@ -1,5 +1,6 @@
 import React from "react";
 
+import RedButton from "./RedButton";
 import ComicsListItem from "./ComicsListItem";
 
 import "./ComicsList.css";
@@ -19,7 +20,17 @@ const ComicsList = ({ comics, selectedComic, selectComic }) => {
       />
     ));
 
-  return <aside className="comics-list">{listItems}</aside>;
+  return (
+    <div className="comics-list">
+      <RedButton
+        link={"/"}
+        text={"Give me more!"}
+        classes={["random-button"]}
+      />
+      <div className="filterWrapper"></div>
+      <aside>{listItems}</aside>
+    </div>
+  );
 };
 
 export default ComicsList;

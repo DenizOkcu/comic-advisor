@@ -1,87 +1,115 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComicsList should render active item first 1`] = `
-<aside
+<div
   className="comics-list"
 >
-  <ComicsListItem
-    active={true}
-    comic={
-      Object {
-        "coverPath": "cover.png",
-        "id": 1,
-        "pageCount": 32,
-        "prices": 3.99,
-        "title": "Superman",
-        "writer": Object {
-          "name": "Bernd",
-          "role": "writer",
-        },
-      }
+  <RedButton
+    classes={
+      Array [
+        "random-button",
+      ]
     }
-    key="1"
-    selectComic={[MockFunction]}
+    link="/"
+    text="Give me more!"
   />
-  <ComicsListItem
-    active={false}
-    comic={
-      Object {
-        "coverPath": "cover.png",
-        "id": 2,
-        "pageCount": 32,
-        "prices": 3.99,
-        "title": "Superman",
-        "writer": Object {
-          "name": "Bernd",
-          "role": "writer",
-        },
+  <div
+    className="filterWrapper"
+  />
+  <aside>
+    <ComicsListItem
+      active={true}
+      comic={
+        Object {
+          "coverPath": "cover.png",
+          "id": 1,
+          "pageCount": 32,
+          "prices": 3.99,
+          "title": "Superman",
+          "writer": Object {
+            "name": "Bernd",
+            "role": "writer",
+          },
+        }
       }
-    }
-    key="2"
-    selectComic={[MockFunction]}
-  />
-</aside>
+      key="1"
+      selectComic={[MockFunction]}
+    />
+    <ComicsListItem
+      active={false}
+      comic={
+        Object {
+          "coverPath": "cover.png",
+          "id": 2,
+          "pageCount": 32,
+          "prices": 3.99,
+          "title": "Superman",
+          "writer": Object {
+            "name": "Bernd",
+            "role": "writer",
+          },
+        }
+      }
+      key="2"
+      selectComic={[MockFunction]}
+    />
+  </aside>
+</div>
 `;
 
 exports[`ComicsList should render active item second 1`] = `
-<aside
+<div
   className="comics-list"
 >
-  <ComicsListItem
-    active={false}
-    comic={
-      Object {
-        "coverPath": "cover.png",
-        "id": 1,
-        "pageCount": 32,
-        "prices": 3.99,
-        "title": "Superman",
-        "writer": Object {
-          "name": "Bernd",
-          "role": "writer",
-        },
-      }
+  <RedButton
+    classes={
+      Array [
+        "random-button",
+      ]
     }
-    key="1"
-    selectComic={[MockFunction]}
+    link="/"
+    text="Give me more!"
   />
-  <ComicsListItem
-    active={true}
-    comic={
-      Object {
-        "coverPath": "cover.png",
-        "id": 2,
-        "pageCount": 32,
-        "prices": 3.99,
-        "title": "Superman",
-        "writer": Object {
-          "name": "Bernd",
-          "role": "writer",
-        },
+  <div
+    className="filterWrapper"
+  />
+  <aside>
+    <ComicsListItem
+      active={false}
+      comic={
+        Object {
+          "coverPath": "cover.png",
+          "id": 1,
+          "pageCount": 32,
+          "prices": 3.99,
+          "title": "Superman",
+          "writer": Object {
+            "name": "Bernd",
+            "role": "writer",
+          },
+        }
       }
-    }
-    key="2"
-    selectComic={[MockFunction]}
-  />
-</aside>
+      key="1"
+      selectComic={[MockFunction]}
+    />
+    <ComicsListItem
+      active={true}
+      comic={
+        Object {
+          "coverPath": "cover.png",
+          "id": 2,
+          "pageCount": 32,
+          "prices": 3.99,
+          "title": "Superman",
+          "writer": Object {
+            "name": "Bernd",
+            "role": "writer",
+          },
+        }
+      }
+      key="2"
+      selectComic={[MockFunction]}
+    />
+  </aside>
+</div>
 `;

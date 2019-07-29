@@ -36,7 +36,6 @@ class App extends Component {
 
         // add comics to the state
         this.setState({ comics });
-        // Part 2 TODO: get selectedComicId from route || first comic id
         this.setState({ selectedComicId: comics[0] && comics[0].id });
       })
       .catch(error => {
@@ -46,7 +45,6 @@ class App extends Component {
 
   // function to select a comic from the list
   selectComic = id => {
-    // TODO: update url after implementing routes
     this.setState({ selectedComicId: id });
     this.setState({ detailsHiddenOnMobile: false });
   };

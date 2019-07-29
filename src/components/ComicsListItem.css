@@ -20,7 +20,8 @@
   padding: 3px 3px 0 10px;
 }
 
-/* only show active and hover effects in the master/detail view */
+/* only show active and hover effects
+  in the master/detail view */
 @media (min-width: 550px) {
   .list-item.active,
   .list-item:hover {
