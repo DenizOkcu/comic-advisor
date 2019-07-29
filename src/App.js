@@ -1,13 +1,11 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import Header from "./components/Header";
 import ComicsDetails from "./components/ComicsDetails";
 import ComicsList from "./components/ComicsList";
 import ComicsSerializer from "./utils/ComicsSerializer";
-
-// import mock data for Part 1
-// Part 2 TODO: replace with an actual endpoint
-import comicsData from "./data/comics";
+import config from "./config";
 
 import "./App.css";
 
@@ -19,19 +17,31 @@ class App extends Component {
   state = {
     comics: null,
     selectedComicId: null,
-    detailsHiddenOnMobile: true
+    detailsHiddenOnMobile: true,
+    error: null
   };
 
   componentDidMount() {
-    // validate and cleanup the comic data
-    // fill missing attributes with defaults
-    const comicsSerializer = new ComicsSerializer();
-    const comics = comicsSerializer.serialize(comicsData);
+    const limit = 5;
+    const offset = Math.ceil(Math.random() * 10000);
+    const url = `${config.apiUrl}?limit=${limit}&offset=${offset}&apikey=${config.publicApiKey}`;
 
-    // add comics to the state
-    this.setState({ comics: comics });
-    // Part 2 TODO: get selectedComicId from route || first comic id
-    this.setState({ selectedComicId: comics[0] && comics[0].id });
+    axios
+      .get(url)
+      .then(res => {
+        // validate and cleanup the comic data
+        // fill missing attributes with defaults
+        const comicsSerializer = new ComicsSerializer();
+        const comics = comicsSerializer.serialize(res.data);
+
+        // add comics to the state
+        this.setState({ comics });
+        // Part 2 TODO: get selectedComicId from route || first comic id
+        this.setState({ selectedComicId: comics[0] && comics[0].id });
+      })
+      .catch(error => {
+        this.setState({ error });
+      });
   }
 
   // function to select a comic from the list
@@ -52,31 +62,42 @@ class App extends Component {
     let selectedComic =
       comics && comics.find(comic => comic.id === this.state.selectedComicId);
 
+    // check for errors, a pending request or...
+    let connectionMessage = this.state.error ? (
+      <main className="loading-wrapper">
+        <div className="loading-title">
+          An error occurred. Please come back later.
+        </div>
+      </main>
+    ) : (
+      <main className="loading-wrapper">
+        <div className="loading-title">Your comics are loading</div>
+        <div className="loading-ripple">
+          <div></div>
+          <div></div>
+        </div>
+      </main>
+    );
+    // ...a successfully loaded response
+    let contentSuccess = (
+      <main>
+        <ComicsList
+          comics={comics}
+          selectedComic={selectedComic}
+          selectComic={this.selectComic}
+        />
+        <ComicsDetails
+          comic={selectedComic}
+          detailsHiddenOnMobile={this.state.detailsHiddenOnMobile}
+          clickToCloseDetails={this.clickToCloseDetails}
+        />
+      </main>
+    );
+
     return (
       <div className="container">
         <Header />
-        {comics ? (
-          <main>
-            <ComicsList
-              comics={comics}
-              selectedComic={selectedComic}
-              selectComic={this.selectComic}
-            />
-            <ComicsDetails
-              comic={selectedComic}
-              detailsHiddenOnMobile={this.state.detailsHiddenOnMobile}
-              clickToCloseDetails={this.clickToCloseDetails}
-            />
-          </main>
-        ) : (
-          <main className="loading-wrapper">
-            <div className="loading-title">Your comics are loading</div>
-            <div className="loading-ripple">
-              <div></div>
-              <div></div>
-            </div>
-          </main>
-        )}
+        {comics ? contentSuccess : connectionMessage}
       </div>
     );
   }

@@ -48,12 +48,12 @@ const ComicsDetails = ({
         rel="noopener noreferrer"
         className=" primary-button"
       >
-        Buy this issue for {comic.price}
+        Learn More...
       </a>
     </article>
   );
 
-  return comicDetail;
+  return comicDetail || null;
 };
 
 export default ComicsDetails;

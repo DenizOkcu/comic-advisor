@@ -45,7 +45,10 @@ class ComicsSerializer {
         ).date
       );
 
-      comics.push(comic);
+        comics.push(comic);
+      } catch (e) {
+        console.log(e);
+      }
     });
     // add price and date formatter
     // add prop types
