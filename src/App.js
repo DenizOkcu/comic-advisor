@@ -21,17 +21,14 @@ class App extends Component {
     error: null
   };
 
-  componentDidMount() {
-    this.fetchComics();
-  }
-
   fetchComics = () => {
-    const limit = 5;
+    const limit = 6;
     const offset = Math.ceil(Math.random() * 10000);
     const url = `${config.apiUrl}?limit=${limit}&offset=${offset}&apikey=${config.publicApiKey}`;
 
-    // removing the comics to load the spinner
+    // resets the comics, shows the spinner
     this.setState({ comics: null });
+    this.setState({ selectedComicId: null });
 
     axios
       .get(url)
@@ -61,9 +58,13 @@ class App extends Component {
     this.setState({ detailsHiddenOnMobile: true });
   };
 
+  componentDidMount() {
+    this.fetchComics();
+  }
+
   render() {
+    // get the comics and find the selected comic object
     let comics = this.state.comics;
-    // find the selected comic object
     let selectedComic =
       comics && comics.find(comic => comic.id === this.state.selectedComicId);
 

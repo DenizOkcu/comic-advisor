@@ -52,7 +52,7 @@ const ComicsDetails = ({
 
       <RedButton
         link={comic.purchaseLink}
-        text={"Learn more..."}
+        text={"Learn more"}
         classes={["primary-button"]}
         blank={true}
       />

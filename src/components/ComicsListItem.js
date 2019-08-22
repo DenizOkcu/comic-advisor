@@ -24,7 +24,7 @@ const ComicsListItem = ({ comic, active, selectComic }) => {
         </div>
         {/* the writer can be empty due to different possible roles */}
         {comic.writer ? <div className="">by {comic.writer.name}</div> : ""}
-        <div className="">Price: {comic.price}</div>
+        <div>Price: {comic.price}</div>
       </div>
     </section>
   );
