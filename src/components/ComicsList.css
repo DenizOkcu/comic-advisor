@@ -5,7 +5,14 @@
   overflow-y: auto;
 }
 
-.random-button {
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.random-button,
+.recent-button {
+  flex: 1;
   background-color: red;
   border-radius: 5px;
   color: white;
@@ -13,10 +20,15 @@
   display: inline-block;
   font-family: "Bangers", Arial Black;
   font-size: 2em;
-  margin-bottom: 10px;
+  margin: 0 5px 10px 0;
   padding: 0.05em 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
+}
+
+.random-button:last-child,
+.recent-button:last-child {
+  margin-right: 0;
 }

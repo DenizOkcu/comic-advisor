@@ -5,9 +5,20 @@ import ComicsListItem from "./ComicsListItem";
 
 import "./ComicsList.css";
 
-const ComicsList = ({ comics, selectedComic, selectComic, fetchComics }) => {
-  const clickToFetchComics = e => {
+const ComicsList = ({
+  comics,
+  selectedComic,
+  selectComic,
+  fetchComics,
+  fetchHistory
+}) => {
+  const clickToFetchNewComics = e => {
     fetchComics();
+    e.preventDefault();
+  };
+
+  const clickToFetchHistory = e => {
+    fetchHistory();
     e.preventDefault();
   };
 
@@ -28,11 +39,18 @@ const ComicsList = ({ comics, selectedComic, selectComic, fetchComics }) => {
   return (
     <aside className="comics-list">
       {listItems}
-      <RedButton
-        text={"Load more"}
-        classes={["random-button"]}
-        clickFunction={clickToFetchComics}
-      />
+      <div className="bottom-nav">
+        <RedButton
+          text={"Load more"}
+          classes={["random-button"]}
+          clickFunction={clickToFetchNewComics}
+        />
+        <RedButton
+          text={"Load Recent"}
+          classes={["recent-button"]}
+          clickFunction={clickToFetchHistory}
+        />
+      </div>
     </aside>
   );
 };

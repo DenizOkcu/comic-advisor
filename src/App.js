@@ -47,6 +47,13 @@ class App extends Component {
       });
   };
 
+  fetchHistory = () => {
+    let comics = [];
+
+    this.setState({ comics });
+    this.setState({ selectedComicId: comics[0] && comics[0].id });
+  };
+
   // function to select a comic from the list
   selectComic = id => {
     this.setState({ selectedComicId: id });
@@ -92,6 +99,7 @@ class App extends Component {
           selectedComic={selectedComic}
           selectComic={this.selectComic}
           fetchComics={this.fetchComics}
+          fetchHistory={this.fetchHistory}
         />
         <ComicsDetails
           comic={selectedComic}
