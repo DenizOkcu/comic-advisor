@@ -1,7 +1,4 @@
 header {
-  display: flex;
-  flex-direction: column;
-  flex: 0;
   font-family: "Bangers", Arial Black;
   margin: 10px 0;
   text-align: center;
