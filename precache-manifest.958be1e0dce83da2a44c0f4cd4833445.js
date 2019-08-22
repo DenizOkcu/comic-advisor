@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d215585a8a65bfd073f5b867eb25e228",
+    "revision": "c64ca76afb92aad3a3aeb0be277c1d07",
     "url": "/comic-advisor/index.html"
   },
   {
-    "revision": "7f661116ab79dd7bd8c2",
-    "url": "/comic-advisor/static/css/main.31eaab0b.chunk.css"
+    "revision": "cb55e32f19b3e701e116",
+    "url": "/comic-advisor/static/css/main.da9881b3.chunk.css"
   },
   {
     "revision": "0e2130828309e1af2543",
     "url": "/comic-advisor/static/js/2.b55f24e0.chunk.js"
   },
   {
-    "revision": "7f661116ab79dd7bd8c2",
-    "url": "/comic-advisor/static/js/main.f993b7e5.chunk.js"
+    "revision": "cb55e32f19b3e701e116",
+    "url": "/comic-advisor/static/js/main.e22c65d3.chunk.js"
   },
   {
     "revision": "f9813abf07489f7c7842",
