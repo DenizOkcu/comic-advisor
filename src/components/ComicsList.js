@@ -5,7 +5,12 @@ import ComicsListItem from "./ComicsListItem";
 
 import "./ComicsList.css";
 
-const ComicsList = ({ comics, selectedComic, selectComic }) => {
+const ComicsList = ({ comics, selectedComic, selectComic, fetchComics }) => {
+  const clickToFetchComics = e => {
+    fetchComics();
+    e.preventDefault();
+  };
+
   // assemble the list items
   // only if at least one comic has been loaded
   const listItems =
@@ -24,9 +29,9 @@ const ComicsList = ({ comics, selectedComic, selectComic }) => {
     <aside className="comics-list">
       {listItems}
       <RedButton
-        link={"/"}
-        text={"Give me more!"}
+        text={"Load more"}
         classes={["random-button"]}
+        clickFunction={clickToFetchComics}
       />
     </aside>
   );

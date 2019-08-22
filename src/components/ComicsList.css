@@ -7,15 +7,16 @@
 
 .random-button {
   background-color: red;
-  font-family: "Bangers", Arial Black;
+  border-radius: 5px;
   color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Bangers", Arial Black;
+  font-size: 2em;
+  margin-bottom: 10px;
   padding: 0.05em 0;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
-  font-size: 2em;
-  border-radius: 5px;
-  display: inline-block;
   width: 100%;
-  margin-bottom: 10px;
 }
