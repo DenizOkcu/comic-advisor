@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/comic-advisor/static/css/main.88c2debf.chunk.css",
-    "main.js": "/comic-advisor/static/js/main.6c4131d6.chunk.js",
-    "main.js.map": "/comic-advisor/static/js/main.6c4131d6.chunk.js.map",
+    "main.css": "/comic-advisor/static/css/main.864b7814.chunk.css",
+    "main.js": "/comic-advisor/static/js/main.f993b7e5.chunk.js",
+    "main.js.map": "/comic-advisor/static/js/main.f993b7e5.chunk.js.map",
     "runtime~main.js": "/comic-advisor/static/js/runtime~main.5f5e0983.js",
     "runtime~main.js.map": "/comic-advisor/static/js/runtime~main.5f5e0983.js.map",
     "static/js/2.b55f24e0.chunk.js": "/comic-advisor/static/js/2.b55f24e0.chunk.js",
     "static/js/2.b55f24e0.chunk.js.map": "/comic-advisor/static/js/2.b55f24e0.chunk.js.map",
     "index.html": "/comic-advisor/index.html",
-    "precache-manifest.3f4f666da5e050c818cb746259b53e3b.js": "/comic-advisor/precache-manifest.3f4f666da5e050c818cb746259b53e3b.js",
+    "precache-manifest.592d13e3c151c9c4d29b3c57c30dedca.js": "/comic-advisor/precache-manifest.592d13e3c151c9c4d29b3c57c30dedca.js",
     "service-worker.js": "/comic-advisor/service-worker.js",
-    "static/css/main.88c2debf.chunk.css.map": "/comic-advisor/static/css/main.88c2debf.chunk.css.map"
+    "static/css/main.864b7814.chunk.css.map": "/comic-advisor/static/css/main.864b7814.chunk.css.map"
   }
 }
