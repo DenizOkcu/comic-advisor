@@ -1,115 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComicsList should render active item first 1`] = `
-<div
+<aside
   className="comics-list"
 >
+  <ComicsListItem
+    active={true}
+    comic={
+      Object {
+        "characters": Array [
+          Object {
+            "id": 0,
+            "name": "Arcade",
+            "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009158",
+          },
+        ],
+        "coverPath": "cover.png",
+        "creators": Array [
+          Object {
+            "id": 0,
+            "name": "Jeff Youngquist",
+            "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+            "role": "editor",
+          },
+        ],
+        "id": 1,
+        "pageCount": 32,
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
+        },
+      }
+    }
+    key="1"
+    selectComic={[MockFunction]}
+  />
+  <ComicsListItem
+    active={false}
+    comic={
+      Object {
+        "characters": Array [
+          Object {
+            "id": 0,
+            "name": "Arcade",
+            "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009158",
+          },
+        ],
+        "coverPath": "cover.png",
+        "creators": Array [
+          Object {
+            "id": 0,
+            "name": "Jeff Youngquist",
+            "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+            "role": "editor",
+          },
+        ],
+        "id": 2,
+        "pageCount": 32,
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
+        },
+      }
+    }
+    key="2"
+    selectComic={[MockFunction]}
+  />
   <RedButton
     classes={
       Array [
         "random-button",
       ]
     }
-    link="/"
-    text="Give me more!"
+    clickFunction={[Function]}
+    text="Load more"
   />
-  <div
-    className="filterWrapper"
-  />
-  <aside>
-    <ComicsListItem
-      active={true}
-      comic={
-        Object {
-          "coverPath": "cover.png",
-          "id": 1,
-          "pageCount": 32,
-          "prices": 3.99,
-          "title": "Superman",
-          "writer": Object {
-            "name": "Bernd",
-            "role": "writer",
-          },
-        }
-      }
-      key="1"
-      selectComic={[MockFunction]}
-    />
-    <ComicsListItem
-      active={false}
-      comic={
-        Object {
-          "coverPath": "cover.png",
-          "id": 2,
-          "pageCount": 32,
-          "prices": 3.99,
-          "title": "Superman",
-          "writer": Object {
-            "name": "Bernd",
-            "role": "writer",
-          },
-        }
-      }
-      key="2"
-      selectComic={[MockFunction]}
-    />
-  </aside>
-</div>
+</aside>
 `;
 
 exports[`ComicsList should render active item second 1`] = `
-<div
+<aside
   className="comics-list"
 >
+  <ComicsListItem
+    active={false}
+    comic={
+      Object {
+        "characters": Array [
+          Object {
+            "id": 0,
+            "name": "Arcade",
+            "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009158",
+          },
+        ],
+        "coverPath": "cover.png",
+        "creators": Array [
+          Object {
+            "id": 0,
+            "name": "Jeff Youngquist",
+            "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+            "role": "editor",
+          },
+        ],
+        "id": 1,
+        "pageCount": 32,
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
+        },
+      }
+    }
+    key="1"
+    selectComic={[MockFunction]}
+  />
+  <ComicsListItem
+    active={true}
+    comic={
+      Object {
+        "characters": Array [
+          Object {
+            "id": 0,
+            "name": "Arcade",
+            "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009158",
+          },
+        ],
+        "coverPath": "cover.png",
+        "creators": Array [
+          Object {
+            "id": 0,
+            "name": "Jeff Youngquist",
+            "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+            "role": "editor",
+          },
+        ],
+        "id": 2,
+        "pageCount": 32,
+        "prices": 3.99,
+        "title": "Superman",
+        "writer": Object {
+          "name": "Bernd",
+          "role": "writer",
+        },
+      }
+    }
+    key="2"
+    selectComic={[MockFunction]}
+  />
   <RedButton
     classes={
       Array [
         "random-button",
       ]
     }
-    link="/"
-    text="Give me more!"
+    clickFunction={[Function]}
+    text="Load more"
   />
-  <div
-    className="filterWrapper"
-  />
-  <aside>
-    <ComicsListItem
-      active={false}
-      comic={
-        Object {
-          "coverPath": "cover.png",
-          "id": 1,
-          "pageCount": 32,
-          "prices": 3.99,
-          "title": "Superman",
-          "writer": Object {
-            "name": "Bernd",
-            "role": "writer",
-          },
-        }
-      }
-      key="1"
-      selectComic={[MockFunction]}
-    />
-    <ComicsListItem
-      active={true}
-      comic={
-        Object {
-          "coverPath": "cover.png",
-          "id": 2,
-          "pageCount": 32,
-          "prices": 3.99,
-          "title": "Superman",
-          "writer": Object {
-            "name": "Bernd",
-            "role": "writer",
-          },
-        }
-      }
-      key="2"
-      selectComic={[MockFunction]}
-    />
-  </aside>
-</div>
+</aside>
 `;

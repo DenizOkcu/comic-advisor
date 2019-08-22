@@ -30,8 +30,29 @@ exports[`ComicsDetails should not render hidden on mobile 1`] = `
     <div
       className="detail-text"
     >
-      <ComicDetailsCharacters />
-      <ComicDetailsCreators />
+      <ComicDetailsCharacters
+        characters={
+          Array [
+            Object {
+              "id": 0,
+              "name": "Arcade",
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009158",
+            },
+          ]
+        }
+      />
+      <ComicDetailsCreators
+        creators={
+          Array [
+            Object {
+              "id": 0,
+              "name": "Jeff Youngquist",
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "role": "editor",
+            },
+          ]
+        }
+      />
       <b>
         Release:
       </b>
@@ -80,8 +101,29 @@ exports[`ComicsDetails should render hidden on mobile 1`] = `
     <div
       className="detail-text"
     >
-      <ComicDetailsCharacters />
-      <ComicDetailsCreators />
+      <ComicDetailsCharacters
+        characters={
+          Array [
+            Object {
+              "id": 0,
+              "name": "Arcade",
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009158",
+            },
+          ]
+        }
+      />
+      <ComicDetailsCreators
+        creators={
+          Array [
+            Object {
+              "id": 0,
+              "name": "Jeff Youngquist",
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "role": "editor",
+            },
+          ]
+        }
+      />
       <b>
         Release:
       </b>

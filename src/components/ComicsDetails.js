@@ -40,8 +40,12 @@ const ComicsDetails = ({
         </div>
 
         <div className="detail-text">
-          <ComicDetailsCharacters characters={comic.characters} />
-          <ComicDetailsCreators creators={comic.creators} />
+          {comic.characters && comic.characters.length > 0 && (
+            <ComicDetailsCharacters characters={comic.characters} />
+          )}
+          {comic.creators && comic.creators.length > 0 && (
+            <ComicDetailsCreators creators={comic.creators} />
+          )}
           <b>Release:</b> {comic.date}
         </div>
       </div>

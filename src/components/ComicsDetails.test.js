@@ -12,7 +12,22 @@ beforeEach(() => {
     prices: [{ price: 3.99 }],
     title: "Superman",
     coverPath: "cover.png",
-    pageCount: 32
+    pageCount: 32,
+    characters: [
+      {
+        resourceURI: "http://gateway.marvel.com/v1/public/characters/1009158",
+        name: "Arcade",
+        id: 0
+      }
+    ],
+    creators: [
+      {
+        resourceURI: "http://gateway.marvel.com/v1/public/creators/4430",
+        name: "Jeff Youngquist",
+        role: "editor",
+        id: 0
+      }
+    ]
   };
   clickToCloseDetails = jest.fn();
 });
