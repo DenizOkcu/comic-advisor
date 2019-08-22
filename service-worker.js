@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/comic-advisor/precache-manifest.592d13e3c151c9c4d29b3c57c30dedca.js"
+  "/comic-advisor/precache-manifest.31b2a77a0f09ccf8330cfe629828f678.js"
 );
 
 self.addEventListener('message', (event) => {
