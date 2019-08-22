@@ -1,6 +1,8 @@
 .comics-list {
   flex: 1;
+  height: 100%;
   margin-right: 10px;
+  overflow-y: auto;
 }
 
 .random-button {

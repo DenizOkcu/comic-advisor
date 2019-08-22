@@ -21,15 +21,14 @@ const ComicsList = ({ comics, selectedComic, selectComic }) => {
     ));
 
   return (
-    <div className="comics-list">
+    <aside className="comics-list">
+      {listItems}
       <RedButton
         link={"/"}
         text={"Give me more!"}
         classes={["random-button"]}
       />
-      <div className="filterWrapper"></div>
-      <aside>{listItems}</aside>
-    </div>
+    </aside>
   );
 };
 

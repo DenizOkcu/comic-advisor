@@ -3,14 +3,13 @@
   border-radius: 2px;
   border: 1px solid #bbb;
   box-shadow: 2px 2px 5px #eee;
-  display: inline-block;
-  height: 99vh;
+  flex: 1;
+  height: 100%;
   left: 0px;
   overflow-y: auto;
   padding: 0 10px 10px 10px;
   position: fixed;
   top: 0px;
-  z-index: 10;
   transition: transform 800ms ease-in-out;
 }
 
@@ -36,12 +35,12 @@
   height: 44px;
   position: fixed;
   right: -13px;
-  z-index: 20;
   text-align: center;
   top: 55%;
   transform: rotate(-90deg);
   vertical-align: middle;
   width: 92px;
+  z-index: 20;
 }
 
 .hidden-on-mobile {
@@ -62,30 +61,34 @@
 
 .primary-button {
   background-color: red;
-  font-family: "Bangers", Arial Black;
+  border-radius: 5px;
   color: white;
+  display: inline-block;
+  font-family: "Bangers", Arial Black;
+  font-size: 2em;
+  margin: 10px 0;
   padding: 0.05em 0;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
-  font-size: 2em;
-  border-radius: 5px;
-  display: inline-block;
   width: 100%;
-  margin-top: 10px;
 }
 
 /* Larger than mobile */
 @media (min-width: 550px) {
   .details {
+    background-color: white;
     border-radius: 2px;
     border: 1px solid #bbb;
     box-shadow: 2px 2px 5px #eee;
-    display: inline-block;
     flex: 1;
     height: 100%;
+    left: 0px;
+    overflow-y: auto;
     padding: 0 10px 10px 10px;
     position: relative;
+    top: 0px;
+    transition: transform 800ms ease-in-out;
   }
 
   /* keine animation intablet und desktop */
@@ -102,22 +105,23 @@
   .hidden-on-gt-mobile {
     display: none;
   }
-
-  .detail-text {
-    flex: 1;
-    padding: 10px 0 0;
-  }
 }
 
 /* Larger than tablet */
 @media (min-width: 850px) {
   .details {
+    background-color: white;
     border-radius: 2px;
     border: 1px solid #bbb;
     box-shadow: 2px 2px 5px #eee;
-    display: inline-block;
     flex: 2;
+    height: 100%;
+    left: 0px;
+    overflow-y: auto;
     padding: 0 10px 10px 10px;
+    position: relative;
+    top: 0px;
+    transition: transform 800ms ease-in-out;
   }
 
   .detail-cover-text-container {
