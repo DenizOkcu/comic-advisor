@@ -15,7 +15,10 @@ class ComicsSerializer {
         let comic = {};
 
         try {
-          comic.coverPath = `${item.thumbnail.path}.${item.thumbnail.extension}`;
+          comic.coverPath = `${item.thumbnail.path}.${item.thumbnail.extension}`.replace(
+            "http:",
+            "https:"
+          );
           comic.creators = item.creators.items.map((creator, index) => {
             creator.id = index;
             return creator;
