@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/comic-advisor/static/css/main.da9881b3.chunk.css",
-    "main.js": "/comic-advisor/static/js/main.46484523.chunk.js",
-    "main.js.map": "/comic-advisor/static/js/main.46484523.chunk.js.map",
-    "runtime~main.js": "/comic-advisor/static/js/runtime~main.5f5e0983.js",
-    "runtime~main.js.map": "/comic-advisor/static/js/runtime~main.5f5e0983.js.map",
-    "static/js/2.b55f24e0.chunk.js": "/comic-advisor/static/js/2.b55f24e0.chunk.js",
-    "static/js/2.b55f24e0.chunk.js.map": "/comic-advisor/static/js/2.b55f24e0.chunk.js.map",
+    "main.css": "/comic-advisor/static/css/main.4ed40f6a.chunk.css",
+    "main.js": "/comic-advisor/static/js/main.a7338416.chunk.js",
+    "main.js.map": "/comic-advisor/static/js/main.a7338416.chunk.js.map",
+    "runtime-main.js": "/comic-advisor/static/js/runtime-main.37f594ca.js",
+    "runtime-main.js.map": "/comic-advisor/static/js/runtime-main.37f594ca.js.map",
+    "static/js/2.6e8a8bc7.chunk.js": "/comic-advisor/static/js/2.6e8a8bc7.chunk.js",
+    "static/js/2.6e8a8bc7.chunk.js.map": "/comic-advisor/static/js/2.6e8a8bc7.chunk.js.map",
     "index.html": "/comic-advisor/index.html",
-    "precache-manifest.807e8e4d1e5b0613a119b395855cb04b.js": "/comic-advisor/precache-manifest.807e8e4d1e5b0613a119b395855cb04b.js",
-    "service-worker.js": "/comic-advisor/service-worker.js",
-    "static/css/main.da9881b3.chunk.css.map": "/comic-advisor/static/css/main.da9881b3.chunk.css.map"
-  }
+    "static/css/main.4ed40f6a.chunk.css.map": "/comic-advisor/static/css/main.4ed40f6a.chunk.css.map",
+    "static/js/2.6e8a8bc7.chunk.js.LICENSE.txt": "/comic-advisor/static/js/2.6e8a8bc7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37f594ca.js",
+    "static/js/2.6e8a8bc7.chunk.js",
+    "static/css/main.4ed40f6a.chunk.css",
+    "static/js/main.a7338416.chunk.js"
+  ]
 }
